@@ -1,6 +1,8 @@
 ARG PORT=443
 FROM cypress/browsers:latest
 
+RUN apt-get update
+
 RUN apt-get install python3 -y
 
 RUN echo $(python3 -m site --user-base)
