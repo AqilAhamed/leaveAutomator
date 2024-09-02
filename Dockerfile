@@ -11,7 +11,7 @@ COPY requirements.txt .
 
 ENV PATH /home/root/.local/bin:${PATH}
 
-RUN apt-get update && apt-get install python3-pip -y && pip install -r requirements.txt
+RUN apt-get update && apt-get install python3-pip -y && pip install -r requirements.txt --break-system-packages
 
 COPY . .
 
