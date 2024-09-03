@@ -15,4 +15,4 @@ RUN apt-get update && apt-get install python3-pip -y && pip install -r requireme
 
 COPY . .
 
-CMD gunicorn app:app  --host 0.0.0.0:$PORT --worker-class uvicorn.workers.UvicornWorker
+CMD gunicorn app:app  --bind 0.0.0.0:$PORT --worker-class uvicorn.workers.UvicornWorker
