@@ -4,7 +4,7 @@ import threading
 
 app = Flask(__name__)
 
-@app.route('/', , methods = ["POST", "GET"])
+@app.route('/', methods = ["POST", "GET"])
 def home():
     return render_template("index.html")
 
